@@ -25,7 +25,7 @@ meta:
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, smittens, and breeds in our database.
 
 We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
@@ -36,15 +36,15 @@ This example API documentation page was created with [Slate](https://github.com/
 > To authorize, use this code:
 
 ```ruby
-require 'kittn'
+require 'smittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 ```
 
 ```python
-import kittn
+import smittn
 
-api = kittn.authorize('meowmeowmeow')
+api = smittn.authorize('meowmeowmeow')
 ```
 
 ```shell
@@ -54,9 +54,9 @@ curl "api_endpoint_here" \
 ```
 
 ```javascript
-const kittn = require('kittn');
+const smittn = require('smittn');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = smittn.authorize('meowmeowmeow');
 ```
 
 > Make sure to replace `meowmeowmeow` with your API key.
@@ -71,34 +71,34 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# Smittens
 
-## Get All Kittens
+## Get All Smittens
 
 ```ruby
-require 'kittn'
+require 'smittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+api.smittens.get
 ```
 
 ```python
-import kittn
+import smittn
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
+api = smittn.authorize('meowmeowmeow')
+api.smittens.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens" \
+curl "http://example.com/api/smittens" \
   -H "Authorization: meowmeowmeow"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const smittn = require('smittn');
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+let api = smittn.authorize('meowmeowmeow');
+let smittens = api.smittens.get();
 ```
 
 > The above command returns JSON structured like this:
@@ -122,49 +122,49 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all smittens.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://example.com/api/smittens`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
 include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include smittens that have already been adopted.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a happy smitten is an authenticated smitten!
 </aside>
 
-## Get a Specific Kitten
+## Get a Specific Smitten
 
 ```ruby
-require 'kittn'
+require 'smittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+api.smittens.get(2)
 ```
 
 ```python
-import kittn
+import smittn
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
+api = smittn.authorize('meowmeowmeow')
+api.smittens.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2" \
+curl "http://example.com/api/smittens/2" \
   -H "Authorization: meowmeowmeow"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const smittn = require('smittn');
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+let api = smittn.authorize('meowmeowmeow');
+let max = api.smittens.get(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -179,47 +179,47 @@ let max = api.kittens.get(2);
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific smitten.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://example.com/smittens/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the smitten to retrieve
 
-## Delete a Specific Kitten
+## Delete a Specific Smitten
 
 ```ruby
-require 'kittn'
+require 'smittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
+api.smittens.delete(2)
 ```
 
 ```python
-import kittn
+import smittn
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
+api = smittn.authorize('meowmeowmeow')
+api.smittens.delete(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2" \
+curl "http://example.com/api/smittens/2" \
   -X DELETE \
   -H "Authorization: meowmeowmeow"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const smittn = require('smittn');
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
+let api = smittn.authorize('meowmeowmeow');
+let max = api.smittens.delete(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -231,15 +231,15 @@ let max = api.kittens.delete(2);
 }
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint deletes a specific smitten.
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`DELETE http://example.com/smittens/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to delete
+ID | The ID of the smitten to delete
 
